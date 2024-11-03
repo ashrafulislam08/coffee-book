@@ -1,8 +1,11 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Heading from "../components/Heading";
+import { useLoaderData } from "react-router-dom";
+import Categories from "../components/Categories";
 
 const Home = () => {
+  const categories = useLoaderData();
   return (
     <div>
       {/* Banner */}
@@ -14,6 +17,9 @@ const Home = () => {
           "Choose your desired coffee category to browse through specific coffees that fit in your taste."
         }
       />
+
+      {/* Dynamic categories */}
+      <Categories categories={categories} />
     </div>
   );
 };
