@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div className="boxShadow px-10 w-full flex items-center flex-col justify-center py-20 rounded-xl bg-[#00543A]">
+    <div className="boxShadow px-10 w-full flex items-center flex-col justify-center py-20 rounded-xl bg-[#00543A] h-screen">
       <img
         src="https://i.ibb.co/LvLq6d3/Group-29.png"
         alt="illustration"
