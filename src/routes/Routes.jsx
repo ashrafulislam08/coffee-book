@@ -3,11 +3,13 @@ import MainLayout from "../layouts/MainLayout";
 import Coffees from "../pages/Coffees";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
+import ErrorPage from "../pages/ErrorPage";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
