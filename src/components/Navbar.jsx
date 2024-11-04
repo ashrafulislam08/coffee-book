@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -26,9 +26,30 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-56 p-4 shadow text-lg"
           >
-            <Link to="/">Home</Link>
-            <Link to="/coffees">Coffees</Link>
-            <Link to="dashboard">Dashboard</Link>
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/coffees"
+            >
+              Coffees
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/dashboard"
+            >
+              Dashboard
+            </NavLink>
           </ul>
         </div>
         <Link to={"/"} className="btn btn-ghost text-xl">
@@ -37,9 +58,30 @@ function Navbar() {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-6">
-          <Link to="/">Home</Link>
-          <Link to="/coffees">Coffees</Link>
-          <Link to="dashboard">Dashboard</Link>
+          <NavLink
+            className={({ isActive }) =>
+              `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+            }
+            to="/coffees"
+          >
+            Coffees
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+            }
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
         </ul>
       </div>
     </div>
