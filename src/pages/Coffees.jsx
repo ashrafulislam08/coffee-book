@@ -8,7 +8,7 @@ const Coffees = () => {
 
   const handleSort = (sortBy) => {
     if (sortBy === "popularity") {
-      const sorted = [...data].sort((a, b) => a.popularity - b.popularity);
+      const sorted = [...data].sort((a, b) => b.popularity - a.popularity);
       setCoffees(sorted);
     } else if (sortBy === "rating") {
       const sorted = [...data].sort((a, b) => a.rating - b.rating);
